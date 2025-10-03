@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact Me</title>
+<script>
+  function validateForm() {
+    const answer = document.getElementById('verification').value.trim();
+    if (answer !== '42') {
+      alert('Incorrect answer to the verification question.');
+      return false; // Prevent form submission
+    }
+    return true; // Allow form submission
+  }
+</script>
+</head>
+<body>
+<header>
+    <h1>Contact Me</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Send Me a Message</h2>
+        <form onsubmit="return validateForm()" action="submit.php" method="POST" id="contactForm">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required /><br /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br /><br />
+
+            <label for="verification">What is 6 * 7? Making sure you're not a bot!</label><br />
+            <input type="text" id="verification" name="verification" required /><br /><br />
+
+            <input type="submit" value="Send Message" />
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Contact: <a href="mailto:your.email@example.com">tabitha.hannas@ontariotechu.net</a></p>
+    <p>&copy; 2025 Tabitha Hannas</p>
+</footer>
+</body>
+</html>
