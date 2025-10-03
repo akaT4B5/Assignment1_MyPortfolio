@@ -137,9 +137,8 @@ textarea.form-input {
   width: 100%;
 }
 
-/* Submit button style */
 .submit-btn {
-  background-color: #333;
+  background: linear-gradient(135deg, #000000 0%, #5b2cff 100%);
   color: white;
   border: none;
   padding: 12px 25px;
@@ -148,8 +147,9 @@ textarea.form-input {
   cursor: pointer;
   width: 100%;
   max-width: 200px;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
+
 .submit-btn:hover {
   background-color: #555;
 }
