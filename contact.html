@@ -3,55 +3,94 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact Me</title>
-<script>
-  function validateForm() {
-    const answer = document.getElementById('verification').value.trim();
-    if (answer !== '42') {
-      alert('Incorrect answer to the verification question.');
-      return false; // Prevent form submission
-    }
-    return true; // Allow form submission
-  }
-</script>
+<title>Contact - Tabitha Hannas</title>
+<link rel="stylesheet" href="contact.css" />
 </head>
 <body>
+
 <header>
-    <h1>Contact Me</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-    </nav>
+  <div class="header-content">
+    <div class="site-title">Tabitha Hannas's Portfolio</div>
+    <div id="currentDateTime"></div>
+  </div>
 </header>
 
 <main>
-    <section>
-        <h2>Send Me a Message</h2>
-        <form onsubmit="return validateForm()" action="submit.php" method="POST" id="contactForm">
-            <label for="name">Name:</label><br />
-            <input type="text" id="name" name="name" required /><br /><br />
+  <h1>Send me questions!</h1>
 
-            <label for="email">Email:</label><br />
-            <input type="email" id="email" name="email" required /><br /><br />
-
-            <label for="message">Message:</label><br />
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br /><br />
-
-            <label for="verification">What is 6 * 7? Making sure you're not a bot!</label><br />
-            <input type="text" id="verification" name="verification" required /><br /><br />
-
-            <input type="submit" value="Send Message" />
-        </form>
-    </section>
+  <div id="saveMessage" style="display:none; margin-bottom:15px; color: green;">Your data has been saved! You can now submit the form.</div>
+  
+  <form id="contactForm" class="contact-form">
+    <div class="form-group">
+      <label for="name">Your name:</label>
+      <input type="text" id="name" class="form-input" placeholder=" " required />
+    </div>
+    <div class="form-group">
+      <label for="email">Your email:</label>
+      <input type="email" id="email" class="form-input" placeholder=" " required />
+    </div>
+    <div class="form-group">
+      <label for="message">Your message:</label>
+      <textarea id="message" class="form-input" placeholder=" " required></textarea>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="submit-btn">Submit</button>
+      <a href="homepage.html" class="back-link">Back to home</a>
+    </div>
+  </form>
 </main>
 
 <footer>
-    <p>Contact: <a href="mailto:your.email@example.com">tabitha.hannas@ontariotechu.net</a></p>
-    <p>&copy; 2025 Tabitha Hannas</p>
+  <div class="footer-content">
+    <div class="contact-info">
+      Contact: <a href="mailto:tabitha.hannas@ontariotechu.net">tabitha.hannas@ontariotechu.net</a>
+    </div>
+    <div class="copyright">© 2025 Tabitha Hannas</div>
+  </div>
 </footer>
+
+<script>
+  // Live update date/time
+  function updateDateTime() {
+    const now = new Date();
+    const options = { 
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    document.getElementById('currentDateTime').textContent = now.toLocaleString('en-US', options);
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+
+  // Save data as text file
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const data = `Contact Submission\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}\n\nSubmitted on: ${new Date().toLocaleString()}`;
+
+    const blob = new Blob([data], {type: 'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `contact_${name.replace(/\s+/g,"_")}_${Date.now()}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+
+    document.getElementById('saveMessage').style.display = 'block';
+    document.getElementById('contactForm').reset();
+
+    setTimeout(() => {
+      document.getElementById('saveMessage').style.display = 'none';
+    }, 5000);
+  });
+</script>
+
 </body>
 </html>

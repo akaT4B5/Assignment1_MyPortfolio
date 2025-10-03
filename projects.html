@@ -1,39 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>My Projects</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects - Tabitha Hannas</title>
+<link rel="stylesheet" href="projects.css" />
 </head>
 <body>
-    <header>
-        <h1>My Projects & Assignments</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section>
-        <article>
-            <h2>Project Title 1</h2>
-            <p>Brief description of Project 1 in 2-3 lines.</p>
-        </article>
-        <article>
-            <h2>Project Title 2</h2>
-            <p>Brief description of Project 2 in 2-3 lines.</p>
-        </article>
-        <article>
-            <h2>Project Title 3</h2>
-            <p>Brief description of Project 3 in 2-3 lines.</p>
-        </article>
-        <article>
-            <h2>Project Title 4</h2>
-            <p>Brief description of Project 4 in 2-3 lines.</p>
-        </article>
-        <article>
-            <h2>Project Title 5</h2>
+
+<header>
+  <div class="header-content">
+    <div class="site-title">Tabitha Hannas's Portfolio</div>
+    <div id="currentDateTime"></div>
+  </div>
+</header>
+
+<main>
+  <h1 style="text-align:center; margin-top:30px; margin-bottom:40px;">My Projects</h1>
+  <div class="projects-row">
+    <!-- Project 1 -->
+    <div class="project-box">
+      <h2 class="project-title">Project 1</h2>
+      <div class="project-image">
+        <img src="project1.jpg" alt="Project 1" />
+      </div>
+      <p class="project-caption">Project 1 description...</p>
+    </div>
+    <!-- Project 2 -->
+    <div class="project-box">
+      <h2 class="project-title">Project 2</h2>
+      <div class="project-image">
+        <img src="project2.jpg" alt="Project 2" />
+      </div>
+      <p class="project-caption">Project 2 description...</p>
+    </div>
+    <!-- Project 3 -->
+    <div class="project-box">
+      <h2 class="project-title">Project 3</h2>
+      <div class="project-image">
+        <img src="project3.jpg" alt="Project 3" />
+      </div>
+      <p class="project-caption">Project 3 description...</p>
+    </div>
+    <!-- Project 4 -->
+    <div class="project-box">
+      <h2 class="project-title">Project 4</h2>
+      <div class="project-image">
+        <img src="project4.jpg" alt="Project 4" />
+      </div>
+      <p class="project-caption">Project 4 description...</p>
+    </div>
+  </div>
+  <!-- Back to home button -->
+  <div style="text-align:center; margin: 20px 0;">
+    <a href="homepage.html" class="back-to-home">Back to Home</a>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="contact-info">
+      <a href="mailto:tabitha.hannas@ontariotechu.net">tabitha.hannas@ontariotechu.net</a>
+    </div>
+    <div class="copyright">© 2025 Tabitha Hannas</div>
+  </div>
+</footer>
+
+<script>
+  // Update date and time every second
+  function updateDateTime() {
+    const now = new Date();
+    const options = { 
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    document.getElementById('currentDateTime').textContent = now.toLocaleString('en-US', options);
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+</script>
+
+</body>
+</html>

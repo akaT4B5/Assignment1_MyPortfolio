@@ -1,0 +1,190 @@
+/* Body styles */
+body {
+  background-color: #FFFDD1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #7851A7;
+}
+
+
+header {
+  width: 100%;
+  background-color: #C4ACE3; /* Light purple */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: relative;
+}
+
+/* Style for the title on the left */
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Style for the date/time in the top right */
+#currentDateTime {
+  position: absolute; /* absolute positioning inside header */
+  right: 30px;        /* same as header padding */
+  top: 15px;          /* align with header padding */
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+}
+
+
+/* Date/time style in header */
+#date-time {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+}
+
+
+/* Main content styles */
+main {
+  flex: 1;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Main heading style */
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+/* Message near submit button (optional) */
+#saveMessage {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Contact form styles */
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form items horizontally */
+}
+
+/* Form groups - center labels and inputs */
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center label and input */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #aaa;
+  background-color: #fff;
+}
+
+textarea.form-input {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Buttons container: submit and back button underneath */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Submit button style */
+.submit-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  transition: background-color 0.3s;
+}
+.submit-btn:hover {
+  background-color: #555;
+}
+
+/* "Back to home" link styled as button underneath submit */
+.back-link {
+  padding: 10px 20px;
+  background-color: #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 150px;
+  text-align: center;
+  display: inline-block;
+}
+.back-link:hover {
+  background-color: #aaa;
+}
+
+/* Footer styles matching other pages */
+footer {
+  width: 100%;
+  background-color: #C4ACE3;
+  padding: 30px 10%;
+  border-top: 1px solid #eee;
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  background-color: #C4ACE3;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}

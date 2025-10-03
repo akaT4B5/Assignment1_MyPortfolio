@@ -1,0 +1,102 @@
+/* Header styling */
+header {
+  width: 100%;
+  background-color: #C4ACE3; /* Light purple */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: relative;
+}
+
+/* Date/time style in header */
+#date-time {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+#currentDateTime {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+}
+/* The site title on the left */
+.site-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+/* Main content styling */
+main {
+  flex: 1;
+  padding: 40px 10%;
+  background-color: #FFFDD1; /* same as main background in about me */
+  min-height: calc(100vh - 170px); /* adjust to keep footer near bottom if needed */
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Projects row layout (same as previous) */
+.projects-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Style each project card */
+.project-box {
+  background-color: #fff; /* white boxes for contrast */
+  padding: 20px;
+  width: calc(25% - 40px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Project title */
+.project-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #7851A7;
+}
+/* Project image */
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  background-color: #C4ACE3;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Button style for back or other buttons if needed later: */
+.back-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #000;
+  background-color: #fff8dc;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #7851A7;
+  font-weight: normal;
+}
+.back-button:hover {
+  background-color: #e0d0b0;
+}
