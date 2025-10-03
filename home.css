@@ -1,0 +1,74 @@
+body {
+  background-color: #FFFDD1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #7851A7;
+}
+
+/* Header styles */
+header {
+  width: 100%;
+  background-color: #C4ACE3; /* Light purple background */
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* scaled up by 1.5 */
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: relative;
+}
+
+/* Style for the date-time element */
+#date-time {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+/* Content area styles */
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Menu styles */
+.menu {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.menu a {
+  color: #7851A7;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.2em;
+}
+
+.menu a:hover {
+  color: #a287d0;
+}
+
+/* Image style */
+img {
+  border: 2px solid #ccc;
+}
+
+/* Footer styles (separate from header) */
+footer {
+  width: 100%;
+  background-color: #C4ACE3;
+  color: #FFF;
+  text-align: center;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
