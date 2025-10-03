@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <header>
+    <div>Tabitha Hannas's Portfolio</div>
+    <div id="date-time"></div>
+  </header>
+  <div id="content">
+    <img src="cover.png" alt="image" width="430" height="441"/>
+    <div class="menu">
+      <a href="about.html">About me</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact me</a>
+    </div>
+  </div>
+  <footer>
+    <p>Contact: <a href="mailto:tabitha.hannas@ontariotechu.net" style="color: #FFF;">tabitha.hannas@ontariotechu.net</a></p>
+    <p>&copy; 2025 Tabitha Hannas</p>
+  </footer>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const dateTimeString = now.toLocaleString();
+      document.getElementById('date-time').textContent = dateTimeString;
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+  </script>
+</body>
+</html>

@@ -9,5 +9,5 @@ This portfolio website presents me as a person, my projects, and a way to contac
 
 How to run locally
 Simple steps to open locally:
-Option A: open homepage.html
+Option A: open index.html
 Option B: run local server (e.g., Python: python -m http.server 8000 or Live Server extension), plus any special notes.
