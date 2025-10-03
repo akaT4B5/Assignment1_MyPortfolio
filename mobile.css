@@ -1,0 +1,46 @@
+/* mobile */
+
+/* Basic reset and body styling */
+body {
+  background-color: #FFFDD1;
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center all text and inline elements */
+}
+
+/* Header and footer styles */
+header, footer {
+  width: 100%;
+  background-color: #C4ACE3;
+  padding: 2vw;
+  text-align: center;
+}
+
+/* Navigation: stack vertically */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: block; /* stack the menu items vertically */
+  margin: 1vh 0;
+}
+
+/* Center images and videos */
+img, video {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Links */
+a {
+  color: #7851A7;
+  text-decoration: none;
+}
+a:hover {
+  color: #a287d0;
+  text-decoration: underline;
+}
