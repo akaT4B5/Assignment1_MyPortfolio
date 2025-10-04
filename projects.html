@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Projects - Tabitha Hannas</title>
-<link rel="stylesheet" href="projects.css" />
+  <!-- Specifies character encoding, viewport settings for responsiveness, page title, and links external CSS stylesheet -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Tabitha Hannas</title>
+  <link rel="stylesheet" href="projects.css" />
 </head>
 <body>
 
+<!-- Header section with site title and live date/time display -->
 <header>
   <div class="header-content">
     <div class="site-title">Tabitha Hannas's Portfolio</div>
@@ -15,8 +17,11 @@
   </div>
 </header>
 
+<!-- Main section with page title and project showcase -->
 <main>
+  <!-- Page heading, centered with top and bottom margins -->
   <h1 style="text-align:center; margin-top:30px; margin-bottom:40px;">My Projects</h1>
+  <!-- Row container for project cards -->
   <div class="projects-row">
     <!-- Project 1 -->
     <div class="project-box">
@@ -24,7 +29,9 @@
       <div class="project-image">
         <img src="Chicago.png" alt="Project 1" />
       </div>
-      <p class="project-caption">Intro to Networking II
+      <!-- Project caption describing the project -->
+      <p class="project-caption">
+        Intro to Networking II
         <p class="project-caption">Reroute and diagnose routing issues within a topology.
         Done in a group of 2 over the span of several weeks. </p>
       </p>
@@ -35,6 +42,7 @@
       <div class="project-image">
         <img src="python.png" alt="Project 2" />
       </div>
+      <!-- Project description -->
       <p class="project-caption">Intro to Programming</p>
       <p class="project-caption">This program collects numbers from the user, separates them into even and odd numbers to calculate their respective averages, and also creates a new list where each number is raised to the power of its position. It then displays these results and allows the user to repeat the process for new sets of numbers.</p>
     </div>
@@ -44,6 +52,7 @@
       <div class="project-image">
         <img src="trudeau.png" alt="Project 3" />
       </div>
+      <!-- Description of the project -->
       <p class="project-caption">Management of the Enterprise</p>
       <p class="project-caption">In a group of 4 from various computer based majors, we made a presentation about world leaders and their leadership qualities. We also had to mention their strengths and weaknesses as well as their insipiration levels.</p>
     </div>
@@ -53,17 +62,18 @@
       <div class="project-image">
         <img src="beer.png" alt="Project 4" />
       </div>
+      <!-- Project description -->
       <p class="project-caption">Writing and Critial Thinking</p>
       <p class="project-caption">I had to read and analyze a Heineken beer ad and then form and defend a thesis. I had a month for various drafts and I had this essay peer reviewed as well as reviewed from outside sources.</p>
     </div>
   </div>
-  <!-- Back to home button -->
+  <!-- Button to navigate back to homepage -->
   <div style="text-align:center; margin: 20px 0;">
     <a href="index.html" class="back-to-home">Back to Home</a>
   </div>
 </main>
 
-<!-- Footer -->
+<!-- Footer section with contact email and copyright -->
 <footer>
   <div class="footer-content">
     <div class="contact-info">
@@ -73,8 +83,8 @@
   </div>
 </footer>
 
+<!-- Script to update current date/time every second -->
 <script>
-  // Update date and time every second
   function updateDateTime() {
     const now = new Date();
     const options = { 
@@ -88,9 +98,4 @@
     };
     document.getElementById('currentDateTime').textContent = now.toLocaleString('en-US', options);
   }
-  updateDateTime();
-  setInterval(updateDateTime, 1000);
-</script>
-
-</body>
-</html>
+  updateDateTime(); // Initial

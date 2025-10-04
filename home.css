@@ -1,4 +1,6 @@
+/* Body styles */
 body {
+  /* Sets background color, font, removes margin and padding, centers content, ensures full viewport height, and sets text color */
   background-color: #FFFDD1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
@@ -12,6 +14,7 @@ body {
 
 /* Header styles */
 header {
+  /* Styles header to be full width, with background color, text color, flexible layout, padding, box-sizing, font styling, and relative positioning */
   width: 100%;
   background-color: #C4ACE3; /* Light purple background */
   color: #FFFFFF;
@@ -25,15 +28,17 @@ header {
   position: relative;
 }
 
-/* Style for the date-time element */
+/* Style for the date-time element in header */
 #date-time {
+  /* Positions the date/time absolutely within the header */
   position: absolute;
   right: 20px;
   top: 10px;
 }
 
-/* Content area styles */
+/* Content area styles for main content section */
 #content {
+  /* Creates a flexible box to center content horizontally and vertically, with text aligned center, and allows it to grow to fill remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,30 +46,37 @@ header {
   text-align: center;
 }
 
-/* Menu styles */
+/* Styles for menu links container */
 .menu {
+  /* Inline-block display with left margin for spacing */
   display: inline-block;
   margin-left: 50px;
 }
 
+/* Styles for links within the menu */
 .menu a {
+  /* Sets link color, removes default underline, horizontal margins, and font size for prominence */
   color: #7851A7;
   text-decoration: none;
   margin: 0 20px;
   font-size: 1.2em;
 }
 
+/* Hover effect for menu links */
 .menu a:hover {
+  /* Changes color on hover for visual feedback */
   color: #a287d0;
 }
 
-/* Image style */
+/* Styles for images */
 img {
+  /* Adds border to images for visual separation */
   border: 2px solid #ccc;
 }
 
-/* Footer styles (separate from header) */
+/* Footer styles */
 footer {
+  /* Styles footer to be full width, with background and text colors, centered text, padding, and box-sizing */
   width: 100%;
   background-color: #C4ACE3;
   color: #FFF;

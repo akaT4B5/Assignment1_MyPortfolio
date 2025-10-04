@@ -1,102 +1,114 @@
 /* Header styling */
 header {
+  /* Sets header to full width, with a light purple background, white text, and flex layout for spacing */
   width: 100%;
   background-color: #C4ACE3; /* Light purple */
-  color: #fff;
+  color: #fff; /* Text color */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  font-weight: bold;
-  font-size: 1.5em;
-  position: relative;
+  padding: 15px 30px; /* Top/bottom and side padding */
+  font-weight: bold; /* Bold text */
+  font-size: 1.5em; /* Larger font size */
+  position: relative; /* Needed for absolutely positioning elements inside */
 }
 
-/* Date/time style in header */
+/* Style for the date/time element in the header */
 #date-time {
+  /* Positions the date/time absolutely within header to the top right */
   position: absolute;
   right: 20px;
   top: 15px;
 }
 
+/* Style for the current date/time text */
 #currentDateTime {
-  font-size: 14px;
-  color: #fff;
-  margin: 0;
+  font-size: 14px; /* Smaller font for date/time */
+  color: #fff; /* White text color */
+  margin: 0; /* Remove default margin */
 }
-/* The site title on the left */
+
+/* The site title on the left side of header */
 .site-title {
+  /* Makes the site title bold with larger font size, flexible to fill space */
   font-weight: bold;
   font-size: 24px;
 }
+
 /* Main content styling */
 main {
+  /* Allows content to flex and fill space, with padding, background color, and minimum height to keep footer near bottom */
   flex: 1;
-  padding: 40px 10%;
-  background-color: #FFFDD1; /* same as main background in about me */
-  min-height: calc(100vh - 170px); /* adjust to keep footer near bottom if needed */
+  padding: 40px 10%; /* Top/bottom and side padding */
+  background-color: #FFFDD1; /* Same as background, for consistency */
+  min-height: calc(100vh - 170px); /* Adjustment to maintain footer position if needed */
 }
 
-/* Page title */
+/* Page title styles */
 h1 {
-  text-align: center;
-  margin-bottom: 40px;
+  text-align: center; /* Centered heading text */
+  margin-bottom: 40px; /* Space below the heading */
 }
 
-/* Projects row layout (same as previous) */
+/* Layout for projects row (flexbox) */
 .projects-row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center project cards horizontally */
+  gap: 30px; /* Space between project cards */
 }
 
-/* Style each project card */
+/* Style each project card container */
 .project-box {
-  background-color: #fff; /* white boxes for contrast */
-  padding: 20px;
-  width: calc(25% - 40px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  text-align: center;
+  background-color: #fff; /* White background for contrast */
+  padding: 20px; /* Inner padding */
+  width: calc(25% - 40px); /* Width responsive to fit four per row minus gaps */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center text inside the box */
 }
 
-/* Project title */
+/* Style for project title text */
 .project-title {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  color: #7851A7;
+  font-size: 1.5em; /* Larger font size */
+  margin-bottom: 15px; /* Space below title */
+  color: #7851A7; /* Primary color for consistency */
 }
-/* Project image */
+
+/* Style for project images inside the project box */
 .project-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  max-width: 100%; /* Make images responsive width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Slightly rounded edges for images */
+  margin-bottom: 10px; /* Space below the image */
 }
 
 /* Footer styling */
 footer {
-  width: 100%;
-  background-color: #C4ACE3;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
+  width: 100%; /* Full width */
+  background-color: #C4ACE3; /* Match header color */
+  color: #fff; /* White text for contrast */
+  text-align: center; /* Center-align content */
+  padding: 15px; /* Padding around footer content */
 }
 
-/* Button style for back or other buttons if needed later: */
+/* Style for back button for navigation */
 .back-button {
+  /* Inline-block button with padding, border, background, font styles, and no underline */
   display: inline-block;
   padding: 8px 16px;
-  border: 1px solid #000;
-  background-color: #fff8dc;
+  border: 1px solid #000; /* Solid black border */
+  background-color: #fff8dc; /* Light background color */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
-  text-decoration: none;
-  border-radius: 4px;
-  color: #7851A7;
-  font-weight: normal;
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 4px; /* Rounded corners */
+  color: #7851A7; /* Text color matching the theme */
+  font-weight: normal; /* Normal font weight */
 }
+
+/* Hover state for back button */
 .back-button:hover {
+  /* Slightly darker background on hover */
   background-color: #e0d0b0;
 }

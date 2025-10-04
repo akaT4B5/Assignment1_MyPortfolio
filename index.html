@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Specifies character encoding, viewport settings for responsiveness, page title, and links external CSS stylesheet -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home</title>
@@ -8,23 +9,29 @@
   <link rel="stylesheet" href="home.css" />
 </head>
 <body>
+  <!-- Header section containing site title and live date/time display -->
   <header>
     <div>Tabitha Hannas's Portfolio</div>
     <div id="date-time"></div>
   </header>
+  <!-- Main content area with image and navigation menu -->
   <div id="content">
+    <!-- Image element with specified source and size -->
     <img src="cover.png" alt="image" width="430" height="441"/>
+    <!-- Navigation menu with links to other pages -->
     <div class="menu">
       <a href="about.html">About me</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact me</a>
     </div>
   </div>
+  <!-- Footer section with contact info and copyright -->
   <footer>
     <p>Contact: <a href="mailto:tabitha.hannas@ontariotechu.net" style="color: #FFF;">tabitha.hannas@ontariotechu.net</a></p>
     <p>&copy; 2025 Tabitha Hannas</p>
   </footer>
 
+  <!-- JavaScript to dynamically update date/time every second -->
   <script>
     function updateDateTime() {
       const now = new Date();
@@ -32,8 +39,8 @@
       document.getElementById('date-time').textContent = dateTimeString;
     }
 
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
+    updateDateTime(); // Initial update on page load
+    setInterval(updateDateTime, 1000); // Update every second
   </script>
 </body>
 </html>

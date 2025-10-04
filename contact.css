@@ -1,5 +1,6 @@
 /* Body styles */
 body {
+  /* Sets overall background color, font, layout, and text color for page */
   background-color: #FFFDD1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
@@ -10,8 +11,9 @@ body {
   color: #7851A7;
 }
 
-
+/* Styles for header element */
 header {
+  /* Sets header full width, background color, text color, layout, and spacing */
   width: 100%;
   background-color: #C4ACE3; /* Light purple */
   color: #fff;
@@ -24,48 +26,43 @@ header {
   position: relative;
 }
 
-/* Style for the title on the left */
+/* Style for site title on the left side of header */
 .site-title {
+  /* Sets font size, weight, margin, and allows it to grow with flex to fill space */
   font-size: 24px;
   font-weight: bold;
   margin: 0;
+  flex: 1;
 }
 
-/* Style for the date/time in the top right */
+/* Style for date/time element on the top right of header */
 #currentDateTime {
+  /* Uses absolute positioning within header for placement */
   position: absolute; /* absolute positioning inside header */
-  right: 30px;        /* same as header padding */
+  right: 30px;        /* same as header padding to align right */
   top: 15px;          /* align with header padding */
   font-size: 14px;
   font-weight: normal;
   color: #fff;
 }
 
-
-/* Date/time style in header */
+/* Alternative date/time style in header, positioned slightly differently */
 #date-time {
   position: absolute;
   right: 20px;
   top: 15px;
 }
 
-.site-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-  flex: 1;
-}
-
-
-/* Main content styles */
+/* Main section styles for layout and spacing */
 main {
+  /* Allows main to grow to fill vertical space, centers it horizontally, with max width and padding */
   flex: 1;
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
 }
 
-/* Main heading style */
+/* Style for main heading */
 h1 {
   font-size: 28px;
   margin-bottom: 30px;
@@ -73,14 +70,15 @@ h1 {
   color: #333;
 }
 
-/* Message near submit button (optional) */
+/* Style for message near submit button (optional) */
 #saveMessage {
   margin-bottom: 15px;
   font-weight: bold;
 }
 
-/* Contact form styles */
+/* Styles for the contact form container */
 .contact-form {
+  /* Sets background, padding, rounded corners, shadow, and column layout for form */
   background-color: #fff;
   padding: 30px;
   border-radius: 8px;
@@ -90,16 +88,18 @@ h1 {
   align-items: center; /* Center the form items horizontally */
 }
 
-/* Form groups - center labels and inputs */
+/* Styles for individual form groups (label and input) */
 .form-group {
+  /* Adds spacing below each group and centers label and input */
   margin-bottom: 20px;
   width: 100%;
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center label and input */
+  align-items: center; /* Center label and input inside */
 }
 
+/* Styles for labels in form groups */
 .form-group label {
   display: block;
   margin-bottom: 8px;
@@ -107,7 +107,9 @@ h1 {
   text-align: center;
 }
 
+/* Styles for input fields */
 .form-input {
+  /* Sets width, padding, border, border-radius, font size, and background color of input fields */
   width: 100%;
   padding: 12px 15px;
   border: 1px solid #ddd;
@@ -116,19 +118,22 @@ h1 {
   background-color: #f9f9f9;
 }
 
+/* Focus styles for input fields to remove outline and change border color */
 .form-input:focus {
   outline: none;
   border-color: #aaa;
   background-color: #fff;
 }
 
+/* Additional styles for textarea input types */
 textarea.form-input {
-  min-height: 150px;
-  resize: vertical;
+  min-height: 150px; /* Minimum height for textarea */
+  resize: vertical;    /* Allow vertical resizing */
 }
 
-/* Buttons container: submit and back button underneath */
+/* Container for form buttons (submit, back link) */
 .form-actions {
+  /* Uses column layout, center alignment, spacing, and full width with max limit */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,54 +142,9 @@ textarea.form-input {
   width: 100%;
 }
 
+/* Styles for the submit button */
 .submit-btn {
+  /* Gradient background, white text, no border, padding, rounded edges, cursor pointer, transition effect */
   background: linear-gradient(135deg, #000000 0%, #5b2cff 100%);
   color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 100%;
-  max-width: 200px;
-  transition: background 0.3s;
-}
-
-.submit-btn:hover {
-  background-color: #555;
-}
-
-/* "Back to home" link styled as button underneath submit */
-.back-link {
-  padding: 10px 20px;
-  background-color: #ccc;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 16px;
-  transition: background-color 0.3s;
-  width: 150px;
-  text-align: center;
-  display: inline-block;
-}
-.back-link:hover {
-  background-color: #aaa;
-}
-
-/* Footer styles matching other pages */
-footer {
-  width: 100%;
-  background-color: #C4ACE3;
-  padding: 30px 10%;
-  border-top: 1px solid #eee;
-}
-
-/* Footer styling */
-footer {
-  width: 100%;
-  background-color: #C4ACE3;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
 }

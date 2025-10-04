@@ -1,4 +1,5 @@
 body {
+  /* Sets the background color, font, margin, padding, layout, and text color for the entire page */
   background-color: #FFFDD1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
@@ -11,6 +12,7 @@ body {
 
 /* Header styling */
 header {
+  /* Styles the header to span full width, with a background color, text color, and layout */
   width: 100%;
   background-color: #C4ACE3; /* Light purple */
   color: #fff;
@@ -25,6 +27,7 @@ header {
 
 /* Date/time style in header */
 #date-time {
+  /* Positions the date/time element to the top right inside header */
   position: absolute;
   right: 20px;
   top: 15px;
@@ -32,6 +35,7 @@ header {
 
 /* Main container for content with increased top padding */
 .about-content {
+  /* Adds top padding and centers content within the container */
   padding-top: 80px; /* Adjust this value for more/less space at the top */
   display: flex;
   flex-direction: column;
@@ -42,6 +46,7 @@ header {
 
 /* Inner containers for text and video side by side */
 .about-main {
+  /* Creates a flexible layout for text and video with spacing, max width, and wrapping for responsiveness */
   display: flex;
   gap: 20px;
   max-width: 900px;
@@ -50,19 +55,23 @@ header {
   justify-content: center;
 }
 
+/* Style for text and video wrapper elements */
 .intro-text, .intro-video {
+  /* Ensures the containers grow equally, with a minimum width for small screens */
   flex: 1;
   min-width: 250px; /* so they stack on small screens if needed */
 }
 
 /* Style the video to be responsive */
 .intro-video video {
+  /* Makes the video scale within its container while maintaining aspect ratio */
   max-width: 100%;
   height: auto;
 }
 
-/* Button style for back or other buttons if needed later: */
+/* Style for back button or similar buttons */
 .back-button {
+  /* Basic styling for buttons with padding, border, background, font, and color */
   display: inline-block;
   padding: 8px 16px;
   border: 1px solid #000;
@@ -75,11 +84,13 @@ header {
   font-weight: normal;
 }
 .back-button:hover {
+  /* Hover effect to change background color */
   background-color: #e0d0b0;
 }
 
 /* Footer styling */
 footer {
+  /* Styles the footer with full width, background, text color, and padding */
   width: 100%;
   background-color: #C4ACE3;
   color: #fff;
@@ -87,10 +98,13 @@ footer {
   padding: 15px;
 }
 
+/* Additional style for the video to center it */
 .intro-video video {
+  /* Centers the video within its container */
   display: block;       /* Make the video behave like a block element */
   margin-left: auto;    /* Center horizontally */
   margin-right: auto;   /* Center horizontally */
   max-width: 100%;      /* Responsive width */
   height: auto;         /* Maintain aspect ratio */
 }
+

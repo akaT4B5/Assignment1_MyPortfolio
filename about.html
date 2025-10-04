@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Specifies character encoding, viewport settings for responsiveness, page title, and links CSS stylesheet -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me</title>
@@ -8,21 +9,23 @@
 </head>
 <body>
 
+  <!-- Header section containing the site title and date/time display -->
   <header>
     <div>Tabitha Hannas's Portfolio</div>
     <div id="date-time"></div>
   </header>
 
+  <!-- Main content area -->
   <main>
     <div class="content-wrapper">
-      <!-- Text Introduction -->
+      <!-- Text Introduction Section -->
       <div class="intro-text">
         <h3>Hi! My name is Tabitha Hannas!</h3>
         <p>I am a second year Information Technology and Networking Security student here at Ontario Tech University. I was born in Vietnam and was adopted to Canada around 4 months old! I love to swim, ski, and play badminton! I have been a swim instructor and lifeguard for the past 4 years and I plan to go back again this spring!</p>
         <p>I found my love of technology at an early age with video games and then later on, coding. Thoughout highschool, I took several tech classes such as Intro to Computer Engineering as well as a few game development classes. </p>
       </div>
       
-      <!-- Your Video -->
+      <!-- Introduction Video Section -->
       <div class="intro-video">
         <h3>My Intro Video</h3>
         <video controls poster="bettercover.png" width="800px" length="300px">
@@ -31,17 +34,19 @@
         </video>
       </div>
     </div>
-    <!-- Back to Home Button -->
+    <!-- Button to go back to the home page -->
     <div style="text-align: center; margin-top: 15px;">
       <a class="back-button" href="index.html">Back to Home</a>
     </div>
   </main>
 
+  <!-- Footer with contact info and copyright -->
   <footer>
     <p>Contact: <a href="mailto:tabitha.hannas@ontariotechu.net" style="color:#fff;">tabitha.hannas@ontariotechu.net</a></p>
     <p>&copy; 2025 Tabitha Hannas</p>
   </footer>
 
+  <!-- Script to update the current date and time every second -->
   <script>
     function updateDateTime() {
       const now = new Date();
